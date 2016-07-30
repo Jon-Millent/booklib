@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="../static/public/header.css">
+	<link rel="stylesheet" type="text/css" href="../static/wen/main.css">
+</head>
+<body>
+	<div id="header">
+		<div class="bg"></div>
+		<div class="show"></div>
+		<div class="nav">
+			<div class="content">
+				<ul class="left">
+					<li class="logo">Thisummer</li>
+					<li><a href="http://127.0.0.1:5000">主页</a></li>
+					<li><a href="http://127.0.0.1:5000/wen">文章</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="content">
+		<div class="wen">
+
+		</div>
+	</div>	
+	<div id="bottom">
+		<div class="content">
+			<p>millent v 1.1.0</p>
+		</div>
+	</div>	
+</body>
+<script type="text/javascript" src="http://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript">
+		$.ajax({
+			type:'post',
+			url:'http://127.0.0.1:5000/getAllwen',
+			success:function(data){
+				var wen = $.parseJSON(data);
+				$.each(wen.data,function(i,v){
+					var temp = '<div class="textshow"><h1><a href="http://127.0.0.1:5000/read/'+v._id+'">'+v.title+'</a></h1></div>';
+
+					$('.wen').append($(temp))
+				})
+			}
+		})
+</script>
+</html>
