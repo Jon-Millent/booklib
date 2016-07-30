@@ -20,7 +20,7 @@ mongod --dbpath  d:\mongodbdata
 
 mongo 127.0.0.1:27017
 ```
-**启动app `python app.py` **
+
 
 ###创建默认表结构
 ```cmd
@@ -57,3 +57,17 @@ jquery 2.2.x
 bjax 1.0.x https://github.com/Jon-Millent/bjax
 jquery.slide 1.0.x https://github.com/Jon-Millent/jqueryTool/tree/master/jqurey.slide
 ```
+##启动你的项目
+
+```cmd
+mongod --dbpath  d:\mongodbdata
+
+mongo 127.0.0.1:27017
+
+cd booklib
+
+python app.py
+```
+
+
+
