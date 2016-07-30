@@ -76,7 +76,7 @@ python app.py
 ###文章设置页
 ![cmd](https://github.com/Jon-Millent/booklib/blob/master/test/show3.png?raw=true)  
 ###首页设置页
-![cmd](https://github.com/Jon-Millent/booklib/blob/master/test/show3.png?raw=true)  
+![cmd](https://github.com/Jon-Millent/booklib/blob/master/test/show4.png?raw=true)  
 
 
 
