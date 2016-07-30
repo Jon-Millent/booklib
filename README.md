@@ -28,4 +28,12 @@ mongo 127.0.0.1:27017
   |--wenid
     |--{name:'wenid',id:'0'}
 ```
+###默认监听端口配置
+```cmd
+booklib\mongo\easy.py
+```
+```python
+  from pymongo import MongoClient
+  client = MongoClient("127.0.0.1",27017)//在这里配置
+```
 
