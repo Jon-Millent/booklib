@@ -18,7 +18,8 @@ mongod --dbpath  d:\mongodbdata
 mongo 127.0.0.1:27017
 ```
 ###创建默认表结构
-|---mainpass <br />
+```cmd
+|---mainpass 
   |--mainpass
     |--{username:'',password:''}
    
@@ -26,4 +27,5 @@ mongo 127.0.0.1:27017
   |--list
   |--wenid
     |--{name:'wenid',id:'0'}
+```
 
