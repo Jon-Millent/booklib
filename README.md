@@ -10,11 +10,20 @@
 
 **进入项目目录`cd booklib` 然后 `pip install`**
 
-##项目结构
->BookLib
->>mongo
->>>__init__.py
->>>easy.py
->>static
->>>admin
+##配置数据库
+###启动数据库
+```cmd
+mongod --dbpath  d:\mongodbdata
+
+mongo 127.0.0.1:27017
+```
+###创建默认表结构
+|---mainpass <br />
+  |--mainpass
+    |--{username:'',password:''}
+   
+|---wenlist
+  |--list
+  |--wenid
+    |--{name:'wenid',id:'0'}
 
