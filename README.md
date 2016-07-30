@@ -47,3 +47,10 @@ booklib\mongo\easy.py
 /login/
 /read/:id
 ```
+###项目中使用到的javascript
+```cmd
+angular 1.3.x
+jquery 2.2.x
+bjax 1.0.x https://github.com/Jon-Millent/bjax
+jquery.slide 1.0.x https://github.com/Jon-Millent/jqueryTool/tree/master/jqurey.slide
+```
