@@ -81,6 +81,6 @@ python app.py
 
 
 ##授权
-**本项目属于个人学习项目，用于学习交流，切勿用于商业用途**
-**本项目图片来自互联网**
-**@jon-millent https://github.com/Jon-Millent**
+**本项目属于个人学习项目，用于学习交流，切勿用于商业用途**<br />
+**本项目图片来自互联网**<br />
+**@jon-millent https://github.com/Jon-Millent**<br />
