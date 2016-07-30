@@ -1,9 +1,6 @@
 from flask import Flask,render_template,request,make_response,session,json
 from mongo import easy
 import time
-from __builtin__ import int
-from jinja2.lexer import integer_re
-
 
 wentoop = easy.EasyDB('wenlist')
 mon = easy.EasyDB('mainpass')
