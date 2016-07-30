@@ -12,6 +12,7 @@
 
 **也可以进入项目目录`cd booklib` 然后 `pip install`**
 
+
 ##配置数据库
 ###启动数据库
 ```cmd
@@ -19,11 +20,13 @@ mongod --dbpath  d:\mongodbdata
 
 mongo 127.0.0.1:27017
 ```
+**启动app `python app.py` **
+
 ###创建默认表结构
 ```cmd
 |---mainpass 
   |--mainpass
-    |--{username:'',password:''}
+    |--{username:'',password:''}//在这里设置管理员密码
    
 |---wenlist
   |--list
