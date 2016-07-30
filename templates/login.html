@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="../static/public/header.css">
+	<link rel="stylesheet" type="text/css" href="../static/login/main.css">
+</head>
+<body>
+	<div id="header">
+		<div class="bg"></div>
+		<div class="show"></div>
+		<div class="nav">
+			<div class="content">
+				<ul class="left">
+					<li class="logo">Thisummer</li>
+					<li><a href="http://127.0.0.1:5000">主页</a></li>
+					<li><a href="http://127.0.0.1:5000/wen">文章</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<form id="myform">
+		<div class="title">
+			Admin
+		</div>
+		<p class="frist">
+			<label for="username">用户名</label><input type="text" class="inbar" name="username" id="username">
+		</p>
+		<p>
+			<label for="username">密码</label><input type="password" class="inbar" name="password" id="username">
+		</p>
+		<p>
+			<input type="button" class="button" name="submit" value="登录">
+		</p>
+	</form>
+</body>
+<script type="text/javascript" src="http://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript" >
+	$(function(){
+		var myform = document.getElementById('myform');
+		var username = myform.elements['username'];
+		var password = myform.elements['password']
+		var btn = myform.elements['submit']
+
+		$(myform).submit(function(e){
+			e.preventDefault()
+			return false;
+		})
+		$(btn).click(function(){
+			if($(username).val()!='' && $(password).val()!=''){
+				$.ajax({
+					type:'post',
+					url:'http://127.0.0.1:5000/regexp',
+					data:{
+						username:$(username).val(),
+						password:$(password).val()
+					},
+					success:function(data){
+						
+						if(data==200){
+							document.location.href="http://127.0.0.1:5000/admin"
+						}else if(data==100){
+							alert('用户名或者密码不正确')
+						}else if(data==50){
+							alert('无该用户')
+						}
+					},
+					error:function(data){
+						
+					}
+				})
+			}else{
+				alert('用户名或者密码不能为空')
+			}
+		})
+	})
+</script>
+</html>
