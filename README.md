@@ -68,6 +68,19 @@ cd booklib
 
 python app.py
 ```
+![cmd](https://github.com/Jon-Millent/booklib/blob/master/test/show5.png?raw=true)  
+###主页
+![cmd](https://github.com/Jon-Millent/booklib/blob/master/test/show1.png?raw=tru)  
+###登录页
+![cmd](https://github.com/Jon-Millent/booklib/blob/master/test/show2.png?raw=true)  
+###文章设置页
+![cmd](https://github.com/Jon-Millent/booklib/blob/master/test/show3.png?raw=true)  
+###首页设置页
+![cmd](https://github.com/Jon-Millent/booklib/blob/master/test/show3.png?raw=true)  
 
 
 
+##授权
+**本项目属于个人学习项目，用于学习交流，切勿用于商业用途**
+**本项目图片来自互联网**
+**@jon-millent https://github.com/Jon-Millent**
