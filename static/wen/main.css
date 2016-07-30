@@ -1,0 +1,21 @@
+#content{
+	width: 1000px;
+	margin: 0 auto;
+	margin-top: 20px;
+	background-color: #fff;
+	opacity: 0.9;
+}
+#content .wen{
+	width: 980px;
+	padding: 10px;
+}
+#content .textshow{
+	margin:10px 0 10px 0; 
+}
+#content .textshow h1{
+	color: #333;
+	font-weight: normal;
+	font-size: 20px;
+	text-indent: 0.5em;
+	border-bottom: 1px solid #ccc;
+}
