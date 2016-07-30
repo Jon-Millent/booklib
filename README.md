@@ -7,8 +7,10 @@
 * python 2.7.x
 * mongodb 2.6.x
 * pip 8.1.x
+* pymongo 3.3.x
+* Jinja2  2.8.x
 
-**进入项目目录`cd booklib` 然后 `pip install`**
+**也可以进入项目目录`cd booklib` 然后 `pip install`**
 
 ##配置数据库
 ###启动数据库
@@ -37,3 +39,11 @@ booklib\mongo\easy.py
   client = MongoClient("127.0.0.1",27017)//在这里配置
 ```
 
+###默认网址目录
+```cmd
+/
+/admin/
+/wen/
+/login/
+/read/:id
+```
