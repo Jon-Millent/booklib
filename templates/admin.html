@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="../static/admin/main.css">
+</head>
+<body ng-controller="ngng">
+	<div id="header">
+		<div class="cen">
+			millent admin --version 1.0.0
+			<span ng-bind="username">欢迎您</span>
+			<a href="#" ng-click="logout()" style="color:#fff">退出</a>
+		</div>
+	</div>
+	<ul id="nav">
+		{% raw %}
+		<li ng-class="{true:'active',false:''}[view.home]" ng-click="showview('home')">首页设置</li>
+		<li ng-class="{true:'active',false:''}[view.wen]" ng-click="showview('wen')">文章设置</li>
+		{% endraw %}
+	</ul>
+	<div id="content">
+		<div class="show" ng-show="view.home">
+			<h1>首页显示文章列表</h1>
+			<table class="table">
+				<thead>
+					<tr>
+						<td>ID</td>
+						<td>标题</td>
+						<td>删除</td>
+						<td>创建时间</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="x in home.data">
+						<td ng-bind="x._id"></td>
+						<td ng-bind="x.title"></td>
+						<td><a href="javascript:;" class="btn delete" ng-click="removehome(x._id,$index)">删除</a></td>
+						<td ng-bind="x.time"></td>
+					</tr>
+				</tbody>
+			</table>
+			<h1>添加文章</h1>
+			<table class="table submit">
+				<thead>
+					<tr>
+						<td>标题</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><input type="text"  ng-model="dbtitle"></td>
+					</tr>
+					<tr>
+						<td>内容</td>
+					</tr>
+					<tr>
+						<td><textarea  ng-model="dbcontent"></textarea></td>
+					</tr>	
+					<tr>
+						<td><a href="javascript:;" class="btn edit" ng-click="dbsubmit()">确认</a></td>
+					</tr>	
+				</tbody>
+				
+			</table>
+		</div>
+		<div class="show" ng-show="view.wen">
+			<h1>全部文章</h1>
+			<table class="table">
+				<thead>
+					<tr>
+						<td>ID</td>
+						<td>标题</td>
+						<td>删除</td>
+						<td>编辑</td>
+						<td>添加首页</td>
+						<td>创建时间</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="x in wen.data">
+						<td ng-bind="x._id"></td>
+						<td ng-bind="x.title"></td>
+						<td><a href="javascript:;" class="btn delete" ng-click="delete(x._id,$index)">删除</a></td>
+						<td><a href="javascript:;" class="btn edit" ng-click="edit(x,$index)">编辑</a></td>
+						<td><a href="javascript:;" class="btn edit" ng-click="addhome(x._id)">添加首页</a></td>
+						<td ng-bind="x.time"></td>
+					</tr>
+				</tbody>
+				
+			</table>
+		</div>
+		<div id="edit" ng-show="mainview.edit">
+			<h1>标题</h1>
+			<input type="text" ng-model="edtitle">
+			<h1>内容</h1>
+			<textarea ng-model="edcontent"></textarea>
+			<div class="btn">
+				<button class="ok" ng-click="submit()">确认</button><button class="no" ng-click="mainview.edit=false">取消</button>
+			</div>
+			
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="http://cdn.bootcss.com/angular.js/1.3.0/angular.min.js"></script>
+<script type="text/javascript" src="../static/public/bjax.js"></script>
+<script type="text/javascript" src="../static/admin/main.js"></script>
+</html>
